@@ -113,10 +113,10 @@ export const useCodeProcessor = () => {
     }
 
     setOutputCode(result);
-    _handleGenerateHtml();
+    _handleGenerateHtml(result);
   };
 
-  const _handleGenerateHtml = () => {
+  const _handleGenerateHtml = (imageTag: string) => {
     const template = `<!DOCTYPE html>
       <html lang="en">
       <meta charset="UTF-8">
@@ -190,7 +190,7 @@ export const useCodeProcessor = () => {
         <div id="ad-wrapper">
           <div class="add-view">
             <button id="close-btn" onclick="document.getElementById('ad-wrapper').style.display='none'">×</button>
-            ${outputCode}
+            ${imageTag}
           </div>
         </div>
       </body>

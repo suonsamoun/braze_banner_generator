@@ -1,0 +1,83 @@
+/* App container styles */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header styles */
+.app-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: #4F46E5;
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6D28D9, #4F46E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #4B5563;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Main content layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+/* Footer styles */
+.app-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #E5E7EB;
+  color: #6B7280;
+  font-size: 0.875rem;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+  
+  .output-section {
+    width: 50%;
+    flex: 3;
+  }
+  
+  .preview-section {
+    flex: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+}
